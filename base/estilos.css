@@ -1,0 +1,74 @@
+:root {
+    --cor-de-fundo: #0067b2;
+    --cor-texto: #fff;
+    --tamanho-texto: 1.5em;
+    --tamanho-area-jogo: 400px;
+    --cor-quadrado-jogo: #fff;
+    --cor-quadrado-jogo-ativo: grey;
+    --borda-quadrado-jogo: 5px solid #000;
+    --cor-simbolo-jogo: #000;
+    --tamanho-simbolo-jogo: 4em;
+    --cor-botao-reiniciar: green;
+    --cor-botao-reiniciar-borda: darkgreen;
+    --cor-botao-reiniciar-ativo: darkgreen;
+}
+
+html,
+body {
+    font-family: Helvetica;
+    background-color: var(--cor-de-fundo);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.jogador-ativo {
+    color: var(--cor-texto);
+    font-size: var(--tamanho-texto);
+}
+
+.resultado-partida {
+    color: var(--cor-texto);
+    font-size: var(--tamanho-texto);
+}
+
+.area-jogo {
+    width: var(--tamanho-area-jogo);
+	height: var(--tamanho-area-jogo);
+	margin: 0 auto;
+    display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+}
+
+.quadrado-jogo {
+    background-color: var(--cor-quadrado-jogo);
+    color: var(--cor-simbolo-jogo);
+    border: var(--borda-quadrado-jogo);
+    font-weight: bold;
+    font-size: var(--tamanho-simbolo-jogo);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadrado-jogo:active {
+    background-color: var(--cor-quadrado-jogo-ativo);
+}
+
+.botao-reiniciar {
+    background-color: var(--cor-botao-reiniciar);
+    border: 5px solid var(--cor-botao-reiniciar-borda);
+    color: var(--cor-texto);
+    font-size: var(--tamanho-texto);
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.botao-reiniciar:active {
+    background-color: var(--cor-botao-reiniciar-ativo);
+}
